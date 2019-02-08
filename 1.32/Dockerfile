@@ -1,4 +1,9 @@
-FROM php:7.2-apache
+FROM FROM lsiobase/ubuntu:bionic
+
+RUN apt update && \
+apt install apache2\
+apt install php && \
+apt install libapache2-mod-php php-mysql
 
 # System Dependencies.
 RUN apt-get update && apt-get install -y \
