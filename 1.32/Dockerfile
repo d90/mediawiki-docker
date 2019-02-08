@@ -19,6 +19,9 @@ RUN apt-get update && apt-get install -y \
 # Install the PHP extensions we need
 RUN docker-php-ext-install mbstring mysqli opcache intl
 
+ENV PHP_URL="https://secure.php.net/get/php-7.3.1.tar.xz/from/this/mirror"
+RUN  wget -O /usr/src/php.tar.xz "$PHP_URL"
+
 # Install the default object cache.
 RUN pecl channel-update pecl.php.net \
 	&& pecl install apcu \
