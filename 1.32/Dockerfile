@@ -1,6 +1,6 @@
 FROM lsiobase/ubuntu:bionic
 
-COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/ 
+COPY docker-php* /usr/local/bin/ 
 
 RUN chmod +x /usr/local/bin/docker-php*
 
