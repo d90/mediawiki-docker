@@ -1,10 +1,10 @@
 FROM lsiobase/ubuntu:bionic
 
 # Apache and PHP
-RUN apt update && \
-apt install apache2\
-apt install php && \
-apt install libapache2-mod-php php-mysql
+RUN apt-get update && \
+apt-get install apache2\
+apt-get install php && \
+apt-get install libapache2-mod-php php-mysql
 
 # System Dependencies.
 RUN apt-get update && apt-get install -y \
