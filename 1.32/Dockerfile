@@ -1,4 +1,4 @@
-FROM FROM lsiobase/ubuntu:bionic
+FROM lsiobase/ubuntu:bionic
 
 # Apache and PHP
 RUN apt update && \
