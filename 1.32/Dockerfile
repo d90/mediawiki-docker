@@ -6,6 +6,7 @@ RUN chmod +x /usr/local/bin/docker-php*
 
 # System Dependencies.
 RUN apt-get update && apt-get install -y \
+		wget \
 		apache2 \
 		php  \
 		libapache2-mod-php php-mysql \
