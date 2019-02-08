@@ -1,7 +1,8 @@
 FROM lsiobase/ubuntu:bionic
 
-COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/ && \
-	chmod +x /usr/local/bin/docker-php*
+COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/ 
+
+RUN chmod +x /usr/local/bin/docker-php*
 
 # System Dependencies.
 RUN apt-get update && apt-get install -y \
