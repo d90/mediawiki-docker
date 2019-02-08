@@ -1,10 +1,12 @@
 FROM lsiobase/ubuntu:bionic
 
+COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/
+
 # System Dependencies.
 RUN apt-get update && apt-get install -y \
 		apache2 \
 		php  \
-		libapache2-mod-php php-mysql docker-php-ext-install mbstring mysqli opcache intl \
+		libapache2-mod-php php-mysql \
 		git \
 		imagemagick \
 		libicu-dev \
@@ -13,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 	--no-install-recommends && rm -r /var/lib/apt/lists/*
 
 # Install the PHP extensions we need
-# RUN docker-php-ext-install mbstring mysqli opcache intl
+RUN docker-php-ext-install mbstring mysqli opcache intl
 
 # Install the default object cache.
 RUN pecl channel-update pecl.php.net \
