@@ -1,5 +1,6 @@
 FROM FROM lsiobase/ubuntu:bionic
 
+# Apache and PHP
 RUN apt update && \
 apt install apache2\
 apt install php && \
