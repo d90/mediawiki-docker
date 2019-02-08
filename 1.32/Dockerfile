@@ -17,6 +17,27 @@ RUN apt-get update && apt-get install -y \
 		python3 \
 	--no-install-recommends && rm -r /var/lib/apt/lists/*
 
+# dependencies required for running "phpize"
+# (see persistent deps below)
+ENV PHPIZE_DEPS \
+		autoconf \
+		dpkg-dev \
+		file \
+		g++ \
+		gcc \
+		libc-dev \
+		make \
+		pkg-config \
+		re2c
+
+# persistent / runtime deps
+RUN apt-get update && apt-get install -y \
+		$PHPIZE_DEPS \
+		ca-certificates \
+		curl \
+		xz-utils \
+	--no-install-recommends && rm -r /var/lib/apt/lists/*
+
 # get php extension stuff
 ENV PHP_URL="https://secure.php.net/get/php-7.3.1.tar.xz/from/this/mirror"
 RUN  wget -O /usr/src/php.tar.xz "$PHP_URL"
