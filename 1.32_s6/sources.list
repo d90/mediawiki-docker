@@ -6,7 +6,3 @@ deb-src http://deb.debian.org/debian-security/ stretch/updates main
 
 deb http://deb.debian.org/debian stretch-updates main
 deb-src http://deb.debian.org/debian stretch-updates main
-
-deb http://archive.ubuntu.com/ubuntu/ xenial main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted
-
