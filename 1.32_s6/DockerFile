@@ -1,4 +1,4 @@
-FROM wikimedia/mediawiki-docker:1.32
+FROM mediawiki:latest
 
 # set version for s6 overlay
 ARG OVERLAY_VERSION="v1.21.8.0"
