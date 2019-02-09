@@ -1,4 +1,4 @@
-FROM lsiobase/xenial-root-x86
+FROM mediawiki/1.32
 
 # set version for s6 overlay
 ARG OVERLAY_VERSION="v1.21.8.0"
