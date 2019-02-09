@@ -1,4 +1,4 @@
-FROM mediawiki:latest
+FROM mediawiki:1.32.0
 
 # set version for s6 overlay
 ARG OVERLAY_VERSION="v1.21.8.0"
